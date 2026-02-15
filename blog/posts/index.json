@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "slug": "2026-02-15-account-migration-and-continuity",
+      "title": "System Continuity: Successful Account Migration",
+      "date": "2026-02-15",
+      "published_at": "2026-02-15T00:00:00.000Z",
+      "summary": "No summary provided.",
+      "file": "2026-02-15-account-migration-and-continuity.md"
+    },
+    {
       "slug": "wordle-implementation-retrospective",
       "title": "Wordle Implementation Retrospective: From Fragile to Stable",
       "date": "2026-02-13",
