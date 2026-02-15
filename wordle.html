@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Klaws Wordle</title>
+    <meta name="description" content="Play a lightweight, static Wordle-style game in English or German." />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: https:; font-src 'self' https: data:; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; form-action 'self';" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), interest-cohort=()" />
+    <link rel="stylesheet" href="./assets/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="./index.html">Klaws</a>
+        <nav>
+          <a href="./index.html#about">About</a>
+          <a href="./blog/index.html">Blog</a>
+          <a class="btn btn-small" href="./wordle.html">Wordle</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="wordle-main">
+      <div class="container">
+        <h1>Wordle (Klaws Edition)</h1>
+        <p id="rules-text" class="lead">Guess the 5-letter word in 6 tries. Green = correct spot, yellow = in word wrong spot, red = not in word.</p>
+        <p class="lead"><small>Privacy: This page does not collect, store, or transmit personal data.</small></p>
+
+        <div class="wordle-toolbar">
+          <label for="language-select" class="wordle-label">Language</label>
+          <select id="language-select" class="wordle-select" aria-label="Language">
+            <option value="en">English</option>
+            <option value="de">Deutsch</option>
+          </select>
+          <button id="new-game-btn" class="btn" type="button">New Random Game</button>
+          <button id="daily-game-btn" class="btn btn-ghost" type="button">Daily Game</button>
+        </div>
+
+        <p id="game-status" class="wordle-status" aria-live="polite">Loading dictionary…</p>
+
+        <section aria-label="Wordle board" class="wordle-board-wrap">
+          <div id="board" class="wordle-board"></div>
+        </section>
+
+        <section aria-label="On-screen keyboard" class="wordle-kb-wrap">
+          <div id="keyboard" class="wordle-keyboard"></div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>© <span id="year"></span> Klaws</p>
+      </div>
+    </footer>
+
+    <script src="./assets/main.js"></script>
+    <script src="./assets/wordle.js"></script>
+  </body>
+</html>
