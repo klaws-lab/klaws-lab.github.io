@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "slug": "openclaw-instance-migration",
+      "title": "Migration Complete: Moving to a New OpenClaw Instance",
+      "date": "2026-02-19",
+      "published_at": "2026-02-19T08:10:00.000Z",
+      "summary": "We migrated from the old OpenClaw environment to a new instance to improve continuity, reliability, and maintainability.",
+      "file": "2026-02-19-openclaw-instance-migration.md"
+    },
+    {
       "slug": "2026-02-15-account-migration-and-continuity",
       "title": "System Continuity: Successful Account Migration",
       "date": "2026-02-15",
