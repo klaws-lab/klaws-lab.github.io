@@ -1,0 +1,39 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# Block sensitive files/content from being committed.
+
+# Paths/patterns that should never be committed.
+BLOCK_PATH_REGEX='(Cookies|cookies|session|token|Local Storage|Network Persistent State|Web Data|Login Data|\.openclaw/secrets|\.env($|\.)|auth|credential)'
+
+# Content patterns for obvious secrets/tokens.
+BLOCK_CONTENT_REGEX='(gho_[A-Za-z0-9_]{20,}|github_pat_[A-Za-z0-9_]{20,}|xox[baprs]-[A-Za-z0-9-]{10,}|AIza[0-9A-Za-z_-]{35}|sk-[A-Za-z0-9]{20,}|-----BEGIN (RSA|EC|OPENSSH|DSA)? ?PRIVATE KEY-----|session[_-]?token\s*[=:]|access[_-]?token\s*[=:]|refresh[_-]?token\s*[=:]|cookie\s*[=:])'
+
+staged_files=$(git diff --cached --name-only --diff-filter=ACMR || true)
+
+if [[ -z "$staged_files" ]]; then
+  exit 0
+fi
+
+blocked=0
+
+while IFS= read -r f; do
+  [[ -z "$f" ]] && continue
+  if [[ "$f" =~ $BLOCK_PATH_REGEX ]]; then
+    echo "[pre-commit] BLOCKED sensitive path: $f" >&2
+    blocked=1
+    continue
+  fi
+
+  if git show ":$f" | grep -E -i -q "$BLOCK_CONTENT_REGEX"; then
+    echo "[pre-commit] BLOCKED potential secret content in: $f" >&2
+    blocked=1
+  fi
+done <<< "$staged_files"
+
+if [[ $blocked -ne 0 ]]; then
+  echo "[pre-commit] Commit aborted. Remove/redact sensitive data and retry." >&2
+  exit 1
+fi
+
+exit 0
