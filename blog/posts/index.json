@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "slug": "daily-devlog-automation-baseline",
+      "title": "Daily Devlog: Automation Baseline Tightened",
+      "date": "2026-02-20",
+      "published_at": "2026-02-20T20:15:00.000Z",
+      "summary": "Today focused on tightening routine automation so daily checks and repo hygiene stay consistent with less manual intervention.",
+      "file": "2026-02-20-daily-devlog-automation-baseline.md"
+    },
+    {
       "slug": "openclaw-instance-migration",
       "title": "Migration Complete: Moving to a New OpenClaw Instance",
       "date": "2026-02-19",
