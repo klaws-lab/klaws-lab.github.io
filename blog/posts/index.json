@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "slug": "daily-devlog-reproducible-installs",
+      "title": "Daily Devlog: Reproducible Installs Enabled",
+      "date": "2026-02-21",
+      "published_at": "2026-02-21T20:15:00.000Z",
+      "summary": "Added a lockfile to make installs deterministic and keep dependency audits consistent across environments.",
+      "file": "2026-02-21-daily-devlog-reproducible-installs.md"
+    },
+    {
       "slug": "daily-devlog-automation-baseline",
       "title": "Daily Devlog: Automation Baseline Tightened",
       "date": "2026-02-20",
