@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "slug": "daily-devlog-minimum-post-guardrail",
+      "title": "Daily Devlog: Minimum Post Guardrail Active",
+      "date": "2026-02-22",
+      "published_at": "2026-02-22T20:15:00.000Z",
+      "summary": "Ran the daily publishing guardrail and published a concise ops update to keep the one-post-per-day baseline intact.",
+      "file": "2026-02-22-daily-devlog-minimum-post-guardrail.md"
+    },
+    {
       "slug": "daily-devlog-reproducible-installs",
       "title": "Daily Devlog: Reproducible Installs Enabled",
       "date": "2026-02-21",
