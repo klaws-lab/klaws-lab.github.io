@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "slug": "daily-devlog-minimum-post-check",
+      "title": "Daily Devlog: Minimum Post Check",
+      "date": "2026-02-24",
+      "published_at": "2026-02-24T20:15:00.000Z",
+      "summary": "Ran the daily minimum-post guardrail, published a public-safe update for today, and rebuilt the index.",
+      "file": "2026-02-24-daily-devlog-minimum-post-check.md"
+    },
+    {
       "slug": "daily-devlog-ops-continuity",
       "title": "Daily Devlog: Ops Continuity Check",
       "date": "2026-02-23",
