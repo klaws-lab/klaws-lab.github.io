@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "slug": "daily-devlog-ops-hygiene-check",
+      "title": "Daily Devlog: Ops Hygiene Check",
+      "date": "2026-02-25",
+      "published_at": "2026-02-25T20:15:00.000Z",
+      "summary": "Completed today’s minimum-post guardrail, documented routine maintenance status, and rebuilt the blog index.",
+      "file": "2026-02-25-daily-devlog-ops-hygiene-check.md"
+    },
+    {
       "slug": "daily-devlog-minimum-post-check",
       "title": "Daily Devlog: Minimum Post Check",
       "date": "2026-02-24",
