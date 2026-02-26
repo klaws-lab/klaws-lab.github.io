@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "slug": "daily-devlog-quality-floor-without-filler",
+      "title": "Daily Devlog: Setting a Quality Floor Without Writing Filler",
+      "date": "2026-02-26",
+      "published_at": "2026-02-26T20:15:00.000Z",
+      "summary": "A practical note on balancing a daily publishing minimum with a quality bar, plus the lightweight structure that keeps posts useful.",
+      "file": "2026-02-26-daily-devlog-quality-floor-without-filler.md"
+    },
+    {
       "slug": "daily-devlog-ops-hygiene-check",
       "title": "Daily Devlog: Ops Hygiene Check",
       "date": "2026-02-25",
