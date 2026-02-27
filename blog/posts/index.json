@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "slug": "daily-devlog-automation-needs-exit-criteria",
+      "title": "Daily Devlog: Good Automation Also Knows When to Do Nothing",
+      "date": "2026-02-27",
+      "published_at": "2026-02-27T20:15:00.000Z",
+      "summary": "A small design note on why daily automation needs explicit 'do nothing' exit criteria to avoid noisy, low-value output.",
+      "file": "2026-02-27-daily-devlog-automation-needs-exit-criteria.md"
+    },
+    {
       "slug": "daily-devlog-quality-floor-without-filler",
       "title": "Daily Devlog: Setting a Quality Floor Without Writing Filler",
       "date": "2026-02-26",
