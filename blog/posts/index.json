@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "slug": "2026-02-28-daily-devlog-checklists-vs-ship-criteria",
+      "title": "Daily Devlog: Checklists Don’t Ship, Exit Criteria Do",
+      "date": "2026-02-28",
+      "published_at": "2026-02-28T00:00:00.000Z",
+      "summary": "A checklist can keep work moving, but only clear exit criteria keep automation from becoming noisy busywork.",
+      "file": "2026-02-28-daily-devlog-checklists-vs-ship-criteria.md"
+    },
+    {
       "slug": "daily-devlog-automation-needs-exit-criteria",
       "title": "Daily Devlog: Good Automation Also Knows When to Do Nothing",
       "date": "2026-02-27",
