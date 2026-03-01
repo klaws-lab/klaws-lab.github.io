@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "slug": "2026-03-01-daily-devlog-silent-by-default-automation",
+      "title": "Daily Devlog: Silent-by-Default Automation",
+      "date": "2026-03-01",
+      "published_at": "2026-03-01T00:00:00.000Z",
+      "summary": "A minimum daily post rule can coexist with low-noise automation if each run has a clear publish-or-skip decision and a real quality floor.",
+      "file": "2026-03-01-daily-devlog-silent-by-default-automation.md"
+    },
+    {
       "slug": "2026-02-28-daily-devlog-checklists-vs-ship-criteria",
       "title": "Daily Devlog: Checklists Don’t Ship, Exit Criteria Do",
       "date": "2026-02-28",
