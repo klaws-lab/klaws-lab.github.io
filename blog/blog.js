@@ -5,7 +5,7 @@ async function loadPostsIndex() {
 }
 
 function escapeHtml(text) {
-  return text
+  return String(text ?? '')
     .replaceAll('&', '&amp;')
     .replaceAll('<', '&lt;')
     .replaceAll('>', '&gt;')
@@ -13,11 +13,39 @@ function escapeHtml(text) {
     .replaceAll("'", '&#039;');
 }
 
+function sanitizeUrl(url) {
+  const raw = String(url ?? '').trim();
+  if (!raw) return null;
+
+  // Allow safe relative links (e.g. /path, ./path, ../path)
+  if (raw.startsWith('/') || raw.startsWith('./') || raw.startsWith('../')) {
+    return raw;
+  }
+
+  try {
+    const parsed = new URL(raw);
+    if (parsed.protocol === 'http:' || parsed.protocol === 'https:') {
+      return parsed.toString();
+    }
+    return null;
+  } catch {
+    return null;
+  }
+}
+
 function inlineMarkdown(text) {
-  return text
+  const escaped = escapeHtml(text);
+
+  return escaped
     .replace(/`([^`]+)`/g, '<code>$1</code>')
     .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
-    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>');
+    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, (_, label, url) => {
+      const safeHref = sanitizeUrl(url);
+      const safeLabel = label;
+      if (!safeHref) return safeLabel;
+      const hrefAttr = escapeHtml(safeHref);
+      return `<a href="${hrefAttr}" rel="noopener noreferrer nofollow">${safeLabel}</a>`;
+    });
 }
 
 function markdownToHtml(md) {
@@ -102,32 +130,57 @@ function formatDate(dateString) {
   });
 }
 
+function clearNode(node) {
+  while (node.firstChild) node.removeChild(node.firstChild);
+}
+
+function renderError(container, message) {
+  clearNode(container);
+  const p = document.createElement('p');
+  p.textContent = message;
+  container.appendChild(p);
+}
+
 async function renderPostList() {
   const container = document.getElementById('post-list');
   if (!container) return;
 
   try {
     const index = await loadPostsIndex();
+    clearNode(container);
 
-    const links = index.posts
+    const posts = (index.posts || [])
+      .slice()
       .sort((a, b) => {
         const aTs = Date.parse(a.published_at || a.date);
         const bTs = Date.parse(b.published_at || b.date);
         if (bTs !== aTs) return bTs - aTs;
         return (a.file || '').localeCompare(b.file || '');
-      })
-      .map(
-        (post) =>
-          `<a class="post-link" href="./post.html?slug=${encodeURIComponent(post.slug)}">\n` +
-          `  <strong>${post.title}</strong>\n` +
-          `  <p>${formatDate(post.published_at || post.date)} • ${post.summary}</p>\n` +
-          `</a>`
-      )
-      .join('');
+      });
 
-    container.innerHTML = links || '<p>No posts yet.</p>';
-  } catch (err) {
-    container.innerHTML = `<p>Could not load posts. ${err.message}</p>`;
+    if (!posts.length) {
+      renderError(container, 'No posts yet.');
+      return;
+    }
+
+    for (const post of posts) {
+      const link = document.createElement('a');
+      link.className = 'post-link';
+      link.href = `./post.html?slug=${encodeURIComponent(post.slug || '')}`;
+
+      const title = document.createElement('strong');
+      title.textContent = String(post.title || 'Untitled');
+
+      const meta = document.createElement('p');
+      const summary = String(post.summary || '').trim();
+      meta.textContent = `${formatDate(post.published_at || post.date)}${summary ? ` • ${summary}` : ''}`;
+
+      link.appendChild(title);
+      link.appendChild(meta);
+      container.appendChild(link);
+    }
+  } catch {
+    renderError(container, 'Could not load posts.');
   }
 }
 
@@ -138,15 +191,15 @@ async function renderSinglePost() {
   const params = new URLSearchParams(window.location.search);
   const slug = params.get('slug');
   if (!slug) {
-    container.innerHTML = '<p>Missing post slug.</p>';
+    renderError(container, 'Missing post slug.');
     return;
   }
 
   try {
     const index = await loadPostsIndex();
-    const post = index.posts.find((p) => p.slug === slug);
+    const post = (index.posts || []).find((p) => p.slug === slug);
     if (!post) {
-      container.innerHTML = '<p>Post not found.</p>';
+      renderError(container, 'Post not found.');
       return;
     }
 
@@ -154,14 +207,26 @@ async function renderSinglePost() {
     if (!res.ok) throw new Error('Could not load post');
     const markdown = await res.text();
 
-    document.title = `${post.title} | Klaws Blog`;
-    container.innerHTML = `
-      <h1>${post.title}</h1>
-      <p><em>${formatDate(post.published_at || post.date)}</em></p>
-      ${markdownToHtml(markdown)}
-    `;
-  } catch (err) {
-    container.innerHTML = `<p>Could not render post. ${err.message}</p>`;
+    document.title = `${String(post.title || 'Post')} | Klaws Blog`;
+
+    clearNode(container);
+
+    const h1 = document.createElement('h1');
+    h1.textContent = String(post.title || 'Untitled');
+
+    const meta = document.createElement('p');
+    const em = document.createElement('em');
+    em.textContent = formatDate(post.published_at || post.date);
+    meta.appendChild(em);
+
+    const article = document.createElement('article');
+    article.innerHTML = markdownToHtml(markdown);
+
+    container.appendChild(h1);
+    container.appendChild(meta);
+    container.appendChild(article);
+  } catch {
+    renderError(container, 'Could not render post.');
   }
 }
 
