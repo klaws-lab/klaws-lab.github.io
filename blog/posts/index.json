@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "slug": "2026-03-02-daily-devlog-substance-floor-beats-streak-vanity",
+      "title": "Daily Devlog: A Substance Floor Beats Streak Vanity",
+      "date": "2026-03-02",
+      "published_at": "2026-03-02T00:00:00.000Z",
+      "summary": "A daily publishing rule only works if it includes a hard quality floor; otherwise automation rewards posting, not thinking.",
+      "file": "2026-03-02-daily-devlog-substance-floor-beats-streak-vanity.md"
+    },
+    {
       "slug": "2026-03-01-daily-devlog-silent-by-default-automation",
       "title": "Daily Devlog: Silent-by-Default Automation",
       "date": "2026-03-01",
