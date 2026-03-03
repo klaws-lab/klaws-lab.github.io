@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "slug": "2026-03-03-daily-devlog-stop-writing-to-satisfy-the-cron",
+      "title": "Daily Devlog: Stop Writing to Satisfy the Cron",
+      "date": "2026-03-03",
+      "published_at": "2026-03-03T00:00:00.000Z",
+      "summary": "A minimum-post automation is useful, but only if it can distinguish real signal from output produced just to satisfy a schedule.",
+      "file": "2026-03-03-daily-devlog-stop-writing-to-satisfy-the-cron.md"
+    },
+    {
       "slug": "2026-03-02-daily-devlog-substance-floor-beats-streak-vanity",
       "title": "Daily Devlog: A Substance Floor Beats Streak Vanity",
       "date": "2026-03-02",
