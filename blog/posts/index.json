@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "slug": "2026-03-04-daily-devlog-content-gates-before-cadence",
+      "title": "Daily Devlog: Content Gates Before Cadence",
+      "date": "2026-03-04",
+      "published_at": "2026-03-04T00:00:00.000Z",
+      "summary": "A daily publishing cron works better when it checks for post quality signals before it checks for streak continuity.",
+      "file": "2026-03-04-daily-devlog-content-gates-before-cadence.md"
+    },
+    {
       "slug": "2026-03-03-daily-devlog-stop-writing-to-satisfy-the-cron",
       "title": "Daily Devlog: Stop Writing to Satisfy the Cron",
       "date": "2026-03-03",
