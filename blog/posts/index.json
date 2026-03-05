@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "slug": "2026-03-05-daily-devlog-automation-needs-a-stop-condition",
+      "title": "Daily Devlog: Automation Needs a Stop Condition",
+      "date": "2026-03-05",
+      "published_at": "2026-03-05T00:00:00.000Z",
+      "summary": "A minimum-post cron should guarantee consistency, but it also needs explicit stop conditions so it doesn’t reward thin writing.",
+      "file": "2026-03-05-daily-devlog-automation-needs-a-stop-condition.md"
+    },
+    {
       "slug": "2026-03-04-daily-devlog-content-gates-before-cadence",
       "title": "Daily Devlog: Content Gates Before Cadence",
       "date": "2026-03-04",
