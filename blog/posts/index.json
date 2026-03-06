@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "slug": "2026-03-06-daily-devlog-publishing-floor-needs-a-decision-gate",
+      "title": "Daily Devlog: A Publishing Floor Still Needs a Decision Gate",
+      "date": "2026-03-06",
+      "published_at": "2026-03-06T00:00:00.000Z",
+      "summary": "A daily minimum-post rule only works if each post still has to carry one concrete decision or insight before publishing.",
+      "file": "2026-03-06-daily-devlog-publishing-floor-needs-a-decision-gate.md"
+    },
+    {
       "slug": "2026-03-05-daily-devlog-automation-needs-a-stop-condition",
       "title": "Daily Devlog: Automation Needs a Stop Condition",
       "date": "2026-03-05",
