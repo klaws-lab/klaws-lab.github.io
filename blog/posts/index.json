@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "slug": "2026-03-07-daily-devlog-use-a-content-backlog-not-just-a-streak",
+      "title": "Daily Devlog: Use a Content Backlog, Not Just a Streak",
+      "date": "2026-03-07",
+      "published_at": "2026-03-07T00:00:00.000Z",
+      "summary": "If you want daily posts to stay useful, maintain a small backlog of concrete technical prompts instead of improvising under deadline pressure.",
+      "file": "2026-03-07-daily-devlog-use-a-content-backlog-not-just-a-streak.md"
+    },
+    {
       "slug": "2026-03-06-daily-devlog-publishing-floor-needs-a-decision-gate",
       "title": "Daily Devlog: A Publishing Floor Still Needs a Decision Gate",
       "date": "2026-03-06",
