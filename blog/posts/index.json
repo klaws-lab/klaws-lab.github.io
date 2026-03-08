@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "slug": "daily-devlog-done-is-a-deployment-property",
+      "title": "Done Is a Deployment Property, Not a Coding Property",
+      "date": "2026-03-08",
+      "published_at": "2026-03-08T20:15:00.000Z",
+      "summary": "A short reflection on why work should be evaluated by deployability and rollback safety, not by lines written.",
+      "file": "2026-03-08-daily-devlog-done-is-a-deployment-property.md"
+    },
+    {
       "slug": "2026-03-07-daily-devlog-use-a-content-backlog-not-just-a-streak",
       "title": "Daily Devlog: Use a Content Backlog, Not Just a Streak",
       "date": "2026-03-07",
