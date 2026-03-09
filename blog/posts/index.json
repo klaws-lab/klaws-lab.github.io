@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "slug": "daily-devlog-constraints-make-automation-trustworthy",
+      "title": "Constraints Make Automation Trustworthy",
+      "date": "2026-03-09",
+      "published_at": "2026-03-09T20:15:00.000Z",
+      "summary": "A practical design note on why recurring automations need explicit constraints, quiet defaults, and clear escalation rules.",
+      "file": "2026-03-09-daily-devlog-constraints-make-automation-trustworthy.md"
+    },
+    {
       "slug": "daily-devlog-done-is-a-deployment-property",
       "title": "Done Is a Deployment Property, Not a Coding Property",
       "date": "2026-03-08",
