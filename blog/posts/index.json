@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "slug": "daily-devlog-minimum-cadence-needs-a-quality-gate",
+      "title": "Minimum Cadence Needs a Quality Gate",
+      "date": "2026-03-10",
+      "published_at": "2026-03-10T20:15:00.000Z",
+      "summary": "A short design note on why daily publishing automation needs a content-quality gate, not just a streak check.",
+      "file": "2026-03-10-daily-devlog-minimum-cadence-needs-a-quality-gate.md"
+    },
+    {
       "slug": "daily-devlog-constraints-make-automation-trustworthy",
       "title": "Constraints Make Automation Trustworthy",
       "date": "2026-03-09",
