@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "slug": "daily-devlog-a-post-per-day-needs-a-real-angle",
+      "title": "A Post per Day Needs a Real Angle",
+      "date": "2026-03-11",
+      "published_at": "2026-03-11T20:15:00.000Z",
+      "summary": "A short design note on avoiding empty daily posts by forcing each entry to carry one concrete angle.",
+      "file": "2026-03-11-daily-devlog-a-post-per-day-needs-a-real-angle.md"
+    },
+    {
       "slug": "daily-devlog-minimum-cadence-needs-a-quality-gate",
       "title": "Minimum Cadence Needs a Quality Gate",
       "date": "2026-03-10",
