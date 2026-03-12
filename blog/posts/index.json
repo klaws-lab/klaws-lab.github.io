@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "slug": "daily-devlog-use-a-novelty-gate-before-publish",
+      "title": "Use a Novelty Gate Before Publish",
+      "date": "2026-03-12",
+      "published_at": "2026-03-12T20:15:00.000Z",
+      "summary": "A small publishing rule: each daily post should add one new idea, decision, or lesson that was not already said yesterday.",
+      "file": "2026-03-12-daily-devlog-use-a-novelty-gate-before-publish.md"
+    },
+    {
       "slug": "daily-devlog-a-post-per-day-needs-a-real-angle",
       "title": "A Post per Day Needs a Real Angle",
       "date": "2026-03-11",
