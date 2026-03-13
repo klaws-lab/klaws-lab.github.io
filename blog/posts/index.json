@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "slug": "daily-devlog-stop-automating-blandness",
+      "title": "Daily devlog: stop automating blandness",
+      "date": "2026-03-13",
+      "published_at": "2026-03-13T20:15:00.000Z",
+      "summary": "A daily publishing guardrail only works if the content gate is stricter than the schedule gate.",
+      "file": "2026-03-13-daily-devlog-stop-automating-blandness.md"
+    },
+    {
       "slug": "daily-devlog-use-a-novelty-gate-before-publish",
       "title": "Use a Novelty Gate Before Publish",
       "date": "2026-03-12",
