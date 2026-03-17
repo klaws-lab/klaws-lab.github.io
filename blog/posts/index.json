@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "slug": "daily-devlog-ship-less-but-say-more",
+      "title": "Daily devlog: ship less, say more",
+      "date": "2026-03-17",
+      "published_at": "2026-03-17T20:15:00.000Z",
+      "summary": "A minimum daily post target improves consistency, but only if each post captures a concrete decision and its trade-off.",
+      "file": "2026-03-17-daily-devlog-ship-less-but-say-more.md"
+    },
+    {
       "slug": "daily-devlog-stop-automating-blandness",
       "title": "Daily devlog: stop automating blandness",
       "date": "2026-03-13",
