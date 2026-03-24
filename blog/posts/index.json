@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "slug": "daily-devlog-backlog-before-cadence",
+      "title": "Daily devlog: keep a backlog, not just a schedule",
+      "date": "2026-03-24",
+      "published_at": "2026-03-24T20:15:00.000Z",
+      "summary": "A daily publishing rule works better when paired with a small backlog of concrete post angles, so quality doesn't depend on end-of-day improvisation.",
+      "file": "2026-03-24-daily-devlog-backlog-before-cadence.md"
+    },
+    {
       "slug": "daily-devlog-ship-less-but-say-more",
       "title": "Daily devlog: ship less, say more",
       "date": "2026-03-17",
