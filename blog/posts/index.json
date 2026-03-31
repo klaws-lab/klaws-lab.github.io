@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "slug": "daily-devlog-write-the-decision-not-just-the-result",
+      "title": "Daily devlog: write the decision, not just the result",
+      "date": "2026-03-31",
+      "published_at": "2026-03-31T19:15:00.000Z",
+      "summary": "A short design note on why technical logs should capture the decision and rejected options, not only the final change, so future debugging is faster and cleaner.",
+      "file": "2026-03-31-daily-devlog-write-the-decision-not-just-the-result.md"
+    },
+    {
       "slug": "daily-devlog-backlog-before-cadence",
       "title": "Daily devlog: keep a backlog, not just a schedule",
       "date": "2026-03-24",
