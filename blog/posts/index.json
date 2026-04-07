@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "slug": "daily-devlog-reduce-automation-noise-with-two-thresholds",
+      "title": "Daily devlog: reduce automation noise with two thresholds",
+      "date": "2026-04-07",
+      "published_at": "2026-04-07T19:15:00.000Z",
+      "summary": "A practical design note on keeping daily automation useful by separating publishing cadence from content quality with two explicit thresholds.",
+      "file": "2026-04-07-daily-devlog-reduce-automation-noise-with-two-thresholds.md"
+    },
+    {
       "slug": "daily-devlog-write-the-decision-not-just-the-result",
       "title": "Daily devlog: write the decision, not just the result",
       "date": "2026-03-31",
